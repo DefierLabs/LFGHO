@@ -30,12 +30,12 @@ const compilerSettings = {
 
 const config: HardhatUserConfig = {
     defaultNetwork: "hardhat",
-    gasReporter: {
-        currency: "USD",
-        enabled: process.env.DISABLE_GAS_REPORT ? false : true,
-        excludeContracts: [],
-        src: "./contracts",
-    },
+    // gasReporter: {
+    //     currency: "USD",
+    //     enabled: process.env.DISABLE_GAS_REPORT ? false : true,
+    //     excludeContracts: [],
+    //     src: "./contracts",
+    // },
     networks: {
         hardhat: {
             chainId: chainIds.hardhat,
@@ -102,21 +102,21 @@ const config: HardhatUserConfig = {
             },
         ],
     },
-    typechain: {
-        outDir: "types/generated",
-        target: "ethers-v5",
-    },
-    etherscan: {
-        apiKey: process.env.ETHERSCAN_KEY,
-    },
+    // typechain: {
+    //     outDir: "types/generated",
+    //     target: "ethers-v5",
+    // },
+    // etherscan: {
+    //     apiKey: process.env.ETHERSCAN_KEY,
+    // },
     mocha: {
         timeout: 480000, // 8 min timeout
     },
-    docgen: {
-        outputDir: "./docs/natspec",
-        templates: "./docs/templates",
-        exclude: ["_mocks", "test", "layerzero"],
-    },
+    // docgen: {
+    //     outputDir: "./docs/natspec",
+    //     templates: "./docs/templates",
+    //     exclude: ["_mocks", "test", "layerzero"],
+    // },
 };
 
 export default config;
